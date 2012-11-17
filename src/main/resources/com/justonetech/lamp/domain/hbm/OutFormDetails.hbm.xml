@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.justonetech.lamp.domain">
+	<class
+		name="OutFormDetails"
+		table="out_form_details"
+	>
+		
+		<meta attribute="sync-DAO">false</meta>
+		<meta attribute="sync-jsp">true</meta>
+		<meta attribute="sync-boolean">get</meta>
+		<meta attribute="treeable">false</meta>
+		<meta attribute="projectable">false</meta>
+        <meta attribute="tableName">出库单明细</meta>
+        <meta attribute="tableComment">出库单明细</meta>
+	    <meta attribute="sync-templatePatterns">list\w*</meta>
+        <meta attribute="sub-system"></meta>
+
+		<id
+			name="id"
+			type="long"
+			column="ID"
+		>
+			<generator class="com.justonetech.core.orm.hibernate.LongIdGenerator"/>
+		</id>
+
+		<property
+			name="count"
+			column="COUNT"
+			type="java.lang.Long"
+			not-null="false"
+			length="10"
+        >
+            <meta attribute="ColumnName">出库数量</meta>
+            <meta attribute="ColumnComment">出库数量</meta>
+        </property>
+
+		<many-to-one
+			name="mendForm"
+			column="MEND_FORM_ID"
+			class="MendForm"
+			not-null="false"
+		>
+		</many-to-one>
+		<many-to-one
+			name="product"
+			column="PRODUCT_ID"
+			class="Product"
+			not-null="false"
+		>
+		</many-to-one>
+
+
+	</class>	
+    <query name="outformdetails_all_data_query">
+        <![CDATA[FROM OutFormDetails]]>
+    </query>
+</hibernate-mapping>

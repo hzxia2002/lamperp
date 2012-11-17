@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.justonetech.lamp.domain">
+	<class
+		name="OutStorage"
+		table="out_storage"
+	>
+		
+		<meta attribute="sync-DAO">false</meta>
+		<meta attribute="sync-jsp">true</meta>
+		<meta attribute="sync-boolean">get</meta>
+		<meta attribute="treeable">false</meta>
+		<meta attribute="projectable">false</meta>
+        <meta attribute="tableName">出库单</meta>
+        <meta attribute="tableComment">出库单</meta>
+	    <meta attribute="sync-templatePatterns">list\w*</meta>
+        <meta attribute="sub-system"></meta>
+
+		<id
+			name="id"
+			type="long"
+			column="ID"
+		>
+			<generator class="com.justonetech.core.orm.hibernate.LongIdGenerator"/>
+		</id>
+
+		<property
+			name="drawer"
+			column="DRAWER"
+			type="string"
+			not-null="false"
+			length="20"
+        >
+            <meta attribute="ColumnName">申领人</meta>
+            <meta attribute="ColumnComment">申领人</meta>
+        </property>
+
+		<property
+			name="outDate"
+			column="OUT_DATE"
+			type="date"
+			not-null="false"
+			length="10"
+        >
+            <meta attribute="ColumnName">出库日期</meta>
+            <meta attribute="ColumnComment">出库日期</meta>
+        </property>
+
+        <property
+                name="outNo"
+                column="OUT_NO"
+                type="string"
+                not-null="false"
+                length="50"
+                >
+            <meta attribute="ColumnName">出库单编号</meta>
+            <meta attribute="ColumnComment">出库单编号</meta>
+        </property>
+
+        <property
+                name="hander"
+                column="HANDER"
+                type="string"
+                not-null="false"
+                length="50"
+                >
+            <meta attribute="ColumnName">经手人</meta>
+            <meta attribute="ColumnComment">经手人</meta>
+        </property>
+
+        <property
+                name="createTime"
+                column="CREATE_TIME"
+                type="timestamp"
+                not-null="false"
+                length="500"
+                >
+            <meta attribute="ColumnName">创建时间</meta>
+            <meta attribute="ColumnComment">创建时间</meta>
+        </property>
+
+        <property
+                name="updateTime"
+                column="UPDATE_TIME"
+                type="timestamp"
+                not-null="false"
+                length="500"
+                >
+            <meta attribute="ColumnName">创建时间</meta>
+            <meta attribute="ColumnComment">创建时间</meta>
+        </property>
+
+        <property
+                name="updateUser"
+                column="UPDATE_USER"
+                type="string"
+                not-null="false"
+                length="100"
+                >
+            <meta attribute="ColumnName">更新人</meta>
+            <meta attribute="ColumnComment">更新人(记录帐号）</meta>
+        </property>
+
+        <property
+                name="createUser"
+                column="CREATE_USER"
+                type="string"
+                not-null="false"
+                length="100"
+                >
+            <meta attribute="ColumnName">创建人</meta>
+            <meta attribute="ColumnComment">创建人(记录帐号）</meta>
+        </property>
+<!--
+
+		<set name="outFormDetails" inverse="true">
+			<key column="OUT_STORAGE_ID"/>
+			<one-to-many class="OutFormDetails"/>
+		</set>
+
+-->
+
+
+	</class>	
+    <query name="outstorage_all_data_query">
+        <![CDATA[FROM OutStorage]]>
+    </query>
+</hibernate-mapping>

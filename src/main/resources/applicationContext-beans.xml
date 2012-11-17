@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean name="menuParser" class="com.justonetech.system.manager.MenuManager" init-method="parse">
+        <property name="filePath" value="menu.xml"/>
+    </bean>
+
+    <bean name="privilegeService" class="com.justonetech.system.manager.PrivilegeServiceImpl">
+    </bean>
+
+    <bean name="initPrivilegeBean" class="com.justonetech.core.security.privilege.InitPrivilegeBean">
+        <property name="privilegeService" ref="privilegeService"></property>
+    </bean>
+
+    <bean name="initTableConfigBean" class="com.justonetech.core.orm.log.InitTableConfigBean">
+        <property name="tableConfigService" ref="configTableManager"></property>
+    </bean>
+</beans>

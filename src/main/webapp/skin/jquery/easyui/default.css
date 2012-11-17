@@ -1,0 +1,253 @@
+﻿*{font-size:12px; font-family: "Microsoft YaHei","宋体";}
+body{background:#ffffff; }
+a{ color:Black; text-decoration:none;}
+a:hover{ color:Red; text-decoration:underline;}
+.textbox03 {border: #878787 1px solid;padding: 4px 3px;font:Verdana, Geneva, sans-serif,宋体;line-height: 14px; background-color: #fff;  height: auto; font-size: 14px;  font-weight: bold; width: 190px; }
+
+.txt01{font:Verdana, Geneva, sans-serif,宋体;padding:3px 2px 2px 2px; border-width:1px; border-color:#ddd;  color:#000;}
+.txt {border: #878787 1px solid;padding: 4px 3px;font:Verdana, Geneva, sans-serif,宋体;line-height: 14px; background-color: #fff;  height: auto; font-size: 14px;}
+.footer{text-align:center;color:#15428B; margin:0px; padding:0px;line-height:23px;}
+
+.head a{color:White;text-decoration:underline;}
+
+.easyui-accordion ul{list-style-type:none;margin:0px; padding:10px;}
+.easyui-accordion ul li{ padding:0px;}
+.easyui-accordion ul li a{line-height:24px;}
+.easyui-accordion ul li div{margin:2px 0px;padding-left:10px;padding-top:2px;}
+.easyui-accordion ul li div.hover{border:1px dashed #99BBE8; background:#E0ECFF;cursor:pointer;}
+.easyui-accordion ul li div.hover a{color:#416AA3;}
+.easyui-accordion ul li div.selected{border:1px solid #99BBE8; background:#E0ECFF;cursor:default;}
+.easyui-accordion ul li div.selected a{color:#416AA3; font-weight:bold;}
+
+
+
+.icon{ background:url(images/tabicons.png) no-repeat;width:18px; line-height:18px; display:inline-block;}
+.icon-sys{ background-position:0px -200px;}
+.icon-set{ background-position:-380px -200px;}
+.icon-add{background-position: -20px 0px;}
+.icon-nav{background-position: -100px -20px; }
+.icon-users{background-position: -100px -480px;}
+.icon-role{background-position: -360px -200px;}
+.icon-set{background-position: -380px -200px;}
+.icon-log{background-position: -380px -80px;}
+.icon-delete{ background-position:-140px -120px;}
+.icon-edit{ background-position:-380px -320px;}
+.icon-magic{ background-position:0px -500px;}
+.icon-database{ background-position:-20px -140px;}
+.icon-expand{ background:url('images/coll2.gif') no-repeat;}
+.icon-collapse{ background:url('images/coll3.gif') no-repeat;}
+
+.text_title{
+	width: 100%;
+	color: #777676;
+	padding-right: 10px;
+}
+
+.panel-body{
+	overflow:auto;
+	border:1px solid #ededed;
+	border-top-width:0px;
+}
+.window {
+	font-size:12px;
+	position:absolute;
+	overflow:hidden;
+	padding:0px;
+	border:1px solid #99BBE8;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius: 5px;
+	background-color: transparent;
+	background-image: url(default/images/panel_title.png);
+}
+.window .window-body{
+	background:#fff;
+	border:0px solid #99BBE8;
+	border-top-width:0px;
+}
+
+.csslabel{
+	width: 25%;
+	text-align:right;
+	padding-right: 5px;
+    border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #FFFFFF;
+}
+.container{
+    align:left;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #FFFFFF;
+}
+
+.csslabel_15{
+    width: 15%;
+    text-align:right;
+    padding-right: 5px;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #FFFFFF;
+}
+
+.container_35{
+    width:35%;
+    align:left;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #FFFFFF;
+}
+
+
+.cssline{
+	height: 25px;
+	padding-left: 5px;
+	background-color: #d8e4fe;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFFFFF;
+}
+.cssline_1{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFFFFF;
+	height: 25px;
+	padding-left: 5px;
+	background-color: #f0f0f0;
+
+}
+/******************add custom**********************/
+.gridBody{
+    background-image:url("images/gridBg.gif");
+    background-repeat:repeat-x;
+}
+.gridQueryArea{
+    height:28px;
+    padding-left:10px;
+    padding-top:5px;
+}
+.gridQueryTable{
+    padding-top:5px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.title_Search{
+	background-image:url(images/title_search_bg.jpg);
+	background-repeat:repeat-x;
+	height: 34px;
+}
+.btn_Search {
+	COLOR: black;
+	background-image: url(default/images/search.png);
+	background-repeat: no-repeat;
+	text-indent: 15px;
+	padding: 2px;
+	height: 23px;
+	width: 54px;
+	border: 0px none;
+	padding: 2px;
+	cursor: pointer;
+}
+.btn_Add {
+	COLOR: black;
+	background-image: url(default/images/add.png);
+	background-repeat: no-repeat;
+	text-indent: 15px;
+	padding: 2px;
+	height: 23px;
+	width: 54px;
+	border: 0px none;
+	padding: 2px;
+	cursor: pointer;
+}
+.btn_Del {
+	COLOR: black;
+	background-image: url(default/images/del.png);
+	background-repeat: no-repeat;
+	text-indent: 15px;
+	padding: 2px;
+	height: 23px;
+	width: 54px;
+	border: 0px none;
+	padding: 2px;
+	cursor: pointer;
+}
+.btn_Ok {
+	COLOR: black;
+	background-image: url(default/images/ok.png);
+	background-repeat: no-repeat;
+	text-indent: 15px;
+	padding: 2px;
+	height: 23px;
+	width: 54px;
+	border: 0px none;
+	padding: 2px;
+	cursor: pointer;
+}
+
+.btn_out {
+    COLOR: black;
+    background-image: url(default/images/btn_out.png);
+    background-repeat: no-repeat;
+    text-indent: 15px;
+    padding: 2px;
+    height: 23px;
+    width: 54px;
+    border: 0px none;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.btn_out_big {
+    COLOR: black;
+    background-image: url(default/images/btn_out_big.png);
+    background-repeat: no-repeat;
+    text-indent: 15px;
+    padding: 2px;
+    height: 23px;
+    width:128px;
+    border: 0px none;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.btn_Refresh {
+    COLOR: black;
+    background-image: url(default/images/refresh.png);
+    background-repeat: no-repeat;
+    text-indent: 15px;
+    padding: 2px;
+    height: 23px;
+    width: 54px;
+    border: 0px none;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.title_input {
+	font-size: 12px;
+	border: 1px solid #8db4d1;
+	color: #000000;
+	width: 200px;
+	height: 20px;
+	background-image: url(default/images/bginput.jpg);
+	background-repeat: repeat;
+	text-indent: 0px;
+}
+.input_table {
+	font-size: 12px;
+	border: 1px solid #8db4d1;
+	color: #000000;
+	width: 70%;
+	height: 20px;
+	/*background-repeat: repeat;*/
+	text-indent: 0px;
+}
+.textarea_table {
+	font-size: 12px;
+	border: 1px solid #8db4d1;
+	color: #000000;
+	width: 70%;
+	/*background-repeat: repeat;*/
+	text-indent: 0px;
+}

@@ -1,0 +1,13 @@
+@import url(./site.css);
+@import url(./jquery/ui/cupertino/jquery-ui-1.8.17.css);
+@import url(./jquery/ui/cupertino/jquery.ui.all.css);
+@import url(./jquery/zTreeStyle/zTreeStyle.css);
+@import url(./jquery/dialog/blue.css);
+@import url(./jquery/grid/ui.jqgrid.css);
+@import url(./jquery/dialog/jquery.window.css);
+
+    /******************************以下为自行添加内容****************************************/
+
+@import url(./jquery/easyui/default/easyui.css);
+@import url(./jquery/easyui/icon.css);
+@import url(./jquery/easyui/default.css);

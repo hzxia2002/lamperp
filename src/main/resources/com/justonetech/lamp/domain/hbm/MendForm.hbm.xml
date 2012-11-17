@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.justonetech.lamp.domain">
+    <class
+            name="MendForm"
+            table="mend_form"
+            >
+
+        <meta attribute="sync-DAO">false</meta>
+        <meta attribute="sync-jsp">true</meta>
+        <meta attribute="sync-boolean">get</meta>
+        <meta attribute="treeable">false</meta>
+        <meta attribute="projectable">false</meta>
+        <meta attribute="tableName">维修单</meta>
+        <meta attribute="tableComment">维修单</meta>
+        <meta attribute="sync-templatePatterns">list\w*</meta>
+        <meta attribute="sub-system"></meta>
+
+        <id
+                name="id"
+                type="long"
+                column="ID"
+                >
+            <generator class="com.justonetech.core.orm.hibernate.LongIdGenerator"/>
+        </id>
+
+        <property
+                name="mendNo"
+                column="MEND_NO"
+                type="string"
+                not-null="false"
+                length="50"
+                >
+            <meta attribute="ColumnName">维修编号</meta>
+            <meta attribute="ColumnComment">维修编号</meta>
+        </property>
+
+        <property
+                name="recordTime"
+                column="RECORD_TIME"
+                type="timestamp"
+                not-null="false"
+                length="19"
+                >
+            <meta attribute="ColumnName">记录日期</meta>
+            <meta attribute="ColumnComment">记录日期</meta>
+        </property>
+
+        <property
+                name="storeNo"
+                column="STORE_NO"
+                type="string"
+                not-null="false"
+                length="50"
+                >
+            <meta attribute="ColumnName">店号</meta>
+            <meta attribute="ColumnComment">店号</meta>
+        </property>
+
+        <property
+                name="storeName"
+                column="STORE_NAME"
+                type="string"
+                not-null="false"
+                length="50"
+                >
+            <meta attribute="ColumnName">中文店名</meta>
+            <meta attribute="ColumnComment">中文店名</meta>
+        </property>
+
+        <property
+                name="troubleCaller"
+                column="TROUBLE_CALLER"
+                type="string"
+                not-null="false"
+                length="20"
+                >
+            <meta attribute="ColumnName">报修人</meta>
+            <meta attribute="ColumnComment">报修人</meta>
+        </property>
+
+        <property
+                name="breakdownCount"
+                column="BREAKDOWN_COUNT"
+                type="java.lang.Long"
+                not-null="false"
+                length="10"
+                >
+            <meta attribute="ColumnName">保修损坏数量</meta>
+            <meta attribute="ColumnComment">保修损坏数量</meta>
+        </property>
+
+        <property
+                name="description"
+                column="DESCRIPTION"
+                type="string"
+                not-null="false"
+                length="500"
+                >
+            <meta attribute="ColumnName">问题描述</meta>
+            <meta attribute="ColumnComment">问题描述</meta>
+        </property>
+
+        <property
+                name="isGuarantee"
+                column="IS_GUARANTEE"
+                type="java.lang.Long"
+                not-null="false"
+                length="10"
+                >
+            <meta attribute="ColumnName">是否保修</meta>
+            <meta attribute="ColumnComment">是否保修</meta>
+        </property>
+
+        <property
+                name="isCurshopGuarant"
+                column="IS_CURSHOP_GUARANT"
+                type="java.lang.Long"
+                not-null="false"
+                length="10"
+                >
+            <meta attribute="ColumnName">是否当店保修</meta>
+            <meta attribute="ColumnComment">是否当店保修</meta>
+        </property>
+
+
+        <property
+                name="material"
+                column="MATERIAL"
+                type="string"
+                not-null="false"
+                length="500"
+                >
+            <meta attribute="ColumnName">更换材料</meta>
+            <meta attribute="ColumnComment">更换材料</meta>
+        </property>
+
+        <property
+                name="mendDate"
+                column="MEND_DATE"
+                type="date"
+                not-null="false"
+                length="10"
+                >
+            <meta attribute="ColumnName">实际维修日期</meta>
+            <meta attribute="ColumnComment">实际维修日期</meta>
+        </property>
+
+        <property
+                name="trafficFee"
+                column="TRAFFIC_FEE"
+                type="java.lang.Double"
+                not-null="false"
+                length="8"
+                >
+            <meta attribute="ColumnName">交通费用</meta>
+            <meta attribute="ColumnComment">交通费用</meta>
+        </property>
+
+        <property
+                name="inTrafficFee"
+                column="IN_TRAFFIC_FEE"
+                type="java.lang.Double"
+                not-null="false"
+                length="8"
+                >
+            <meta attribute="ColumnName">市内交通费用</meta>
+            <meta attribute="ColumnComment">市内交通费用</meta>
+        </property>
+
+        <property
+                name="materialTransFee"
+                column="MATERIAL_TRANS_FEE"
+                type="java.lang.Double"
+                not-null="false"
+                length="8"
+                >
+            <meta attribute="ColumnName">材料运输费用</meta>
+            <meta attribute="ColumnComment">材料运输费用</meta>
+        </property>
+
+        <property
+                name="otherFee"
+                column="OTHER_FEE"
+                type="java.lang.Double"
+                not-null="false"
+                length="8"
+                >
+            <meta attribute="ColumnName">其它费用</meta>
+            <meta attribute="ColumnComment">其它费用</meta>
+        </property>
+
+        <property
+                name="materialFee"
+                column="MATERIAL_FEE"
+                type="java.lang.Double"
+                not-null="false"
+                length="8"
+                >
+            <meta attribute="ColumnName">材料费用</meta>
+            <meta attribute="ColumnComment">材料费用</meta>
+        </property>
+
+        <property
+                name="lodgeFee"
+                column="LODGE_FEE"
+                type="java.lang.Double"
+                not-null="false"
+                length="8"
+                >
+            <meta attribute="ColumnName">住宿费用</meta>
+            <meta attribute="ColumnComment">住宿费用</meta>
+        </property>
+
+        <property
+                name="lampFee"
+                column="LAMP_FEE"
+                type="java.lang.Double"
+                not-null="false"
+                length="8"
+                >
+            <meta attribute="ColumnName">灯具费用</meta>
+            <meta attribute="ColumnComment">灯具费用</meta>
+        </property>
+
+        <property
+                name="storeFee"
+                column="STORE_FEE"
+                type="java.lang.Double"
+                not-null="false"
+                length="8"
+                >
+            <meta attribute="ColumnName">库存费用</meta>
+            <meta attribute="ColumnComment">库存费用</meta>
+        </property>
+
+        <property
+                name="total"
+                column="TOTAL"
+                type="java.lang.Double"
+                not-null="false"
+                length="8"
+                >
+            <meta attribute="ColumnName">总计</meta>
+            <meta attribute="ColumnComment">总计</meta>
+        </property>
+
+        <property
+                name="mender"
+                column="MENDER"
+                type="string"
+                not-null="false"
+                length="20"
+                >
+            <meta attribute="ColumnName">维修人</meta>
+            <meta attribute="ColumnComment">维修人</meta>
+        </property>
+
+        <property
+                name="status"
+                column="STATUS"
+                type="string"
+                not-null="false"
+                length="2"
+                >
+            <meta attribute="ColumnName">状态</meta>
+            <meta attribute="ColumnComment">状态</meta>
+        </property>
+
+        <many-to-one
+                name="firm"
+                column="FIRM_ID"
+                class="com.justonetech.system.domain.SysDept"
+                not-null="false"
+                >
+        </many-to-one>
+        <many-to-one
+                name="area"
+                column="AREA"
+                class="com.justonetech.system.domain.SysCodeDetail"
+                not-null="false"
+                >
+        </many-to-one>
+        <many-to-one
+                name="problemTypeSecond"
+                column="PROBLEM_TYPE_SECOND"
+                class="com.justonetech.system.domain.SysCodeDetail"
+                not-null="false"
+                >
+        </many-to-one>
+        <many-to-one
+                name="mendDueLimit"
+                column="MEND_DUE_LIMIT"
+                class="com.justonetech.system.domain.SysCodeDetail"
+                not-null="false"
+                >
+        </many-to-one>
+        <many-to-one
+                name="problemTypeOne"
+                column="PROBLEM_TYPE_ONE"
+                class="com.justonetech.system.domain.SysCode"
+                not-null="false"
+                >
+        </many-to-one>
+        <many-to-one
+                name="mendRank"
+                column="MEND_RANK"
+                class="com.justonetech.system.domain.SysCodeDetail"
+                not-null="false"
+                >
+        </many-to-one>
+        <many-to-one
+                name="outForm"
+                column="OUT_FORM_ID"
+                class="com.justonetech.lamp.domain.OutStorage"
+                not-null="false"
+                >
+        </many-to-one>
+
+
+
+
+        <!--
+
+                <set name="outStorages" inverse="true">
+                    <key column="MEND_FORM_ID"/>
+                    <one-to-many class="OutStorage"/>
+                </set>
+
+        -->
+
+
+    </class>
+    <query name="mendform_all_data_query">
+        <![CDATA[FROM MendForm]]>
+    </query>
+</hibernate-mapping>

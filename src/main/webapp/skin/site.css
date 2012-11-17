@@ -1,0 +1,66 @@
+img
+{
+    border-style:none;
+}
+
+a:link, a:visited
+{
+    text-decoration: none;
+    color: #0000FF;
+}
+
+.label{
+    width: 25%;
+    text-align:right;
+    padding-right: 5px;
+}
+
+/*.csslabel{*/
+    /*width: 25%;*/
+    /*text-align:right;*/
+    /*padding-right: 5px;*/
+/*}*/
+
+/*.cssline{*/
+    /*border-bottom: rgba(145, 130, 156, 0.41) dotted 1px;*/
+    /*height: 25px;*/
+    /*padding-left: 5px;*/
+/*}*/
+
+/*.container{*/
+    /*align:left;*/
+/*}*/
+
+input{
+    border:#999 1px solid;
+    height: 20px;
+    vertical-align:middle;
+}
+
+.button{
+    BORDER-RIGHT: #7b9ebd 1px solid;
+    PADDING-RIGHT: 2px;
+    BORDER-TOP: #7b9ebd 1px solid;
+    PADDING-LEFT: 2px;
+    FONT-SIZE: 12px;
+    BORDER-LEFT: #7b9ebd 1px solid;
+    CURSOR: hand; COLOR: black;
+    PADDING-TOP: 2px;
+    BORDER-BOTTOM: #7b9ebd 1px solid
+}
+
+.errors {
+    color: red;
+    font-weight: bold;
+}
+a.button {
+    BORDER-RIGHT: #7b9ebd 1px solid;
+    PADDING-RIGHT: 2px;
+    BORDER-TOP: #7b9ebd 1px solid;
+    PADDING-LEFT: 2px;
+    FONT-SIZE: 12px;
+    BORDER-LEFT: #7b9ebd 1px solid;
+    CURSOR: hand; COLOR: black;
+    PADDING-TOP: 1px;
+    BORDER-BOTTOM: #7b9ebd 1px solid
+}
