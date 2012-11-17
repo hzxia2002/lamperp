@@ -146,13 +146,16 @@ public class OutStorageController extends BaseCRUDActionController<OutStorage> {
             }
 
             orderCheck = outStorageManager.checkAndSave(target,mendFormIds);
-
         } catch (Exception e) {
             log.error("error", e);
             super.processException(response, e);
         }
 
-        sendSuccessJSON(response,  (orderCheck!=null&&orderCheck.isEnough())?"保存成功":orderCheck.getMsg());
+        if(orderCheck!=null && !orderCheck.isEnough()) {
+            sendFailureJSON(response, orderCheck.getMsg());
+        } else {
+            sendSuccessJSON(response, "出库单保存成功");
+        }
     }
 
     @RequestMapping
@@ -279,7 +282,8 @@ public class OutStorageController extends BaseCRUDActionController<OutStorage> {
 
                     map.put("productName",outFormDetails.getProduct().getName()) ;
                     map.put("code",outFormDetails.getProduct().getCode()) ;
-                    map.put("id",outFormDetails.getId()) ;
+                    map.put("id",outFormDetails.getProduct().getId()) ;
+                    map.put("outId",outFormDetails.getId()) ;
                     map.put("count", outFormDetails.getCount()) ;
 
                     productsList.add(map);

@@ -23,6 +23,10 @@
                 if (!$("#outStorageEditForm").form('validate')) {
                     return;
                 }
+                if($("#productAddGrid").jqGrid('getDataIDs').length==0){
+                    alert("未添加产品明细");
+                    return;
+                }
                 $("#products").val(toJsonString(products));
                 //提交表单
                 saveAjaxData("${ctx}/outStorage/save.do", "outStorageEditForm", "outStorageWindow", "outStorageGrid");
@@ -35,9 +39,10 @@
         $("#productAddGrid").jqGrid({
             url:'${ctx}/outStorage/getProducts.do',
             datatype: "json",
-            colNames:["ID","产品名称","产品编号","数量","状态","操作"],
+            colNames:["ID","出库单明细Id","产品名称","产品编号","数量","状态","操作"],
             colModel:[
                 {name:'id',index:'id',width:80,align:"center",sortable:false,hidden:true},
+                {name:'outId',index:'outId',width:80,align:"center",sortable:false,hidden:true},
                 {name:'productName',index:'productName',width:80,align:"center",sortable:false},
                 {name:'code',index:'code',width:80,align:"center",sortable:false},
                 {name:'count',index:'count',width:80,align:"center",sortable:false},
@@ -68,7 +73,7 @@
                         if(udatas["status"]!="1"){
 
                             var operation = "<a href='#' style='color:#f60' onclick='doEdit(" + id + ")'>修改</a>";  //这里的onclick就是调用了上面的javascript函数 Modify(id)
-                            operation += "&nbsp;<a href='#'  style='color:#f60' onclick='doDelete(" + id + ")' >删除</a>";
+                            operation += "&nbsp;<a href='#'  style='color:#f60' onclick='doDelete(" + udatas["outId"] + ")' >删除</a>";
                             jQuery("#productAddGrid").jqGrid('setRowData', ids[i], { operation: operation});
                         }
                     }
@@ -98,6 +103,9 @@
                             $("#per_productName").val("") ;
                             $("#per_product").val("") ;
                             $("#perCount").val("");
+                        },
+                        error: function(XMLHttpRequest, textStatus, errorThrown) {
+                            alert(XMLHttpRequest);
                         }
                     });
                 }
@@ -200,7 +208,7 @@
                         <span style="color: red">*</span>维修单:
                     </td>
                     <td  class="container">
-                        <select  size="5" id="mendFormName" name="mendFormName"  style="width: 400px" readonly="true" required="true" onchange="selectMendForm()">
+                        <select  size="5" id="mendFormName" name="mendFormName"  style="width: 400px" readonly="true" required="true" onchange="selectMendForm()" onclick="selectMendForm()">
                             <c:forEach items="${mendForms}" var="mendForm">
                                 <option value="${mendForm.id}">${mendForm.mendNo}(${mendForm.firm.name})</option>
                             </c:forEach>

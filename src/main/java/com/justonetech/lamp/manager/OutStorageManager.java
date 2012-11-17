@@ -68,6 +68,7 @@ public class OutStorageManager {
                 ids.append(id).append(",");
                 countMap.put(id, outFormDetailse.getCount());
             }
+            products.add(outFormDetailse.getProduct());
         }
 
 
